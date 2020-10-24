@@ -72,7 +72,6 @@ header {
     min-height: 90vh;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-attachment: fixed; */
     background-position: center;
     padding: 40px 0;
     color: white;
@@ -188,12 +187,9 @@ article {
     float: left;
 }
 .profile article {
-    /* margin: 20px; */
     float: left;
     padding: 0 40px;
     width: 75%;
-    /* width: 200px !important;  */
-    /* display: block; */
 }
 
 /* MAIN-LINKS SECTION  */
@@ -243,7 +239,6 @@ h3 {
 }
 .the-gram li {
     width: calc((99.99% - 5.4vw) / 3);
-    /* width: 33%; */
     float: left;
     margin-right: 2.7vw;
 }
@@ -256,7 +251,6 @@ h3 {
 
 aside {
     background-color: #1f2022;
-    /* height: 300px; */
     color: white;
     padding: 90px;
 }
@@ -301,15 +295,14 @@ form {
 }
 
 button {
+    width: 25%;
     background: #f2a11c;
     text-transform: uppercase;
     font-size: 1.7rem;
     border: none;
-    /* padding: 7px 37px; */
     padding: 7px 10px;
     margin: 0;
     display: inline-block;
-    width: 25%;
     float: right;
 }
 
@@ -328,12 +321,24 @@ footer span {
 }
 
 @media (max-width: 768px) {
+    /* HEADER SECTION  */
+    header {
+        background-image: url(./assets/image-1-mobile@2x.jpg);
+    }
+    h1 {
+        font-size: 7rem;
+        margin-top: 27vh;
+    }
+    .socials {
+        display: none;
+    }
+
     /* INFO SECTION  */
     .info li {
         width: 100vw;
     }
     .top-info li:nth-of-type(1) {
-        min-height: 172px;
+        min-height: 175px;
         float: none;
     }
     .top-info li:nth-of-type(2) {
@@ -341,12 +346,33 @@ footer span {
         clear: both;
     }
     .bottom-info li:nth-of-type(1) {
-      min-height: 172px;
+      min-height: 175px;
     }
 
     .bottom-info li:nth-of-type(2) {
       min-height: 372px;
     }
+
+    /* PROFILE SECTION  */
+    .profile {
+        padding: 5vw;
+    }
+    .profile .centering{
+        margin: 0 auto;
+        width:50%;
+    }
+    .profile-pic {
+        width: 100%;
+    }
+    .profile h2 {
+        padding: 35px 0 0;
+        text-align: center;
+    }
+    .profile article {
+        padding: 0;
+        width: 100%;
+    }
+
     /* ASIDE SECTION  */
     aside {
         padding: 15px;
@@ -359,6 +385,60 @@ footer span {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 417px) {
+    .centering{
+        text-align: center;
+    }
+
+    /* HEADER SECTION  */
+    .top-nav {
+        display: none;
+    }
+
+    /* INFO SECTION  */
+
+    .top-info li:nth-of-type(2),
+    .bottom-info li:nth-of-type(2) {
+      min-height: 423px;
+      text-align: center;
+    }
+
+    /* PROFILE SECTION  */
+    .profile .centering{
+        width:100%;
+    }
     
+    /* MAIN-LINKS  */
+    .main-links li {
+        padding-bottom: 0;
+    }
+    /* THE-GRAM SECTION  */
+    .the-gram li:nth-of-type(3) {
+        display: none;
+    }
+    .the-gram li:nth-of-type(1) {
+        margin-left: 2.7vw;
+    }
+    .the-gram li {
+        width: calc((99.99% - 8.1vw) / 2);
+    }
+    .the-gram ul {
+        margin-bottom: 25px;
+    }
+    /* ASIDE SECTION  */
+    nav li:nth-of-type(1) a {
+        padding-left: 0;
+    }
+    nav li:nth-of-type(4) a {
+        padding-right: 0;
+    }
+    #email {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 10px;
+    }
+    button {
+        width: 100%;
+    }
 }
