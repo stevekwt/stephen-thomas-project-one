@@ -85,16 +85,35 @@ p {
     position: absolute;
     right: 0;
     top: 5px;
-    
-}
-.mobile-menu {
     width: 88%;
+    display: none;
 }
+.mobile-menu-content {
+    color: black;
+}
+
 .mobile-menu-content li {
     float: left;
     /* width: auto; */
 }
-
+.mobile-menu-content ul {
+    /* display: none; */
+    /* position: absolute; */
+    /* right: -290px;  */
+    /* width: 0; */
+    height: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+.mobile-menu-content a {
+    display:block;
+    padding: 12px;
+    background-color: #f2a01cc6;
+    border: 2px solid blue;
+}
+.mobile-menu-content input {
+    display: none;
+}
 .fa-bars {
     font-size: 5rem;
     padding: 0 12px;
@@ -102,38 +121,18 @@ p {
     float: right;
 }
 
-.mobile-menu-content {
-    color: black;
-    /* max-height: 0;
-    overflow: hidden; */
-}
-.mobile-menu-content a {
-    display:block;
-    padding: 12px;
-    background-color: #f2a01cc6;
-    /* border: 2px solid blue; */
-}
-
-.mobile-menu-content ul {
-    display: none;
-}
-.mobile-menu-content input {
-    display: none;
-}
-
-.mobile-menu {
-    display: none;
-}
-
-/* hides all mobile menu except hamburger  */
-    /* .mobile-menu-content li {
-        display: initial; 
-    } */
-    /* .mobile-menu-content li:last-child {
-        display: initial;
-    } */
 input[type="checkbox"]:checked + ul {
-    display: initial;
+    /* display: initial; */
+    /* right: 66px; */
+    /* width: 291px; */
+    transition: height 0.3s ease-out 0s;
+}
+
+input[type="checkbox"]:not(:checked) + ul {
+    /* right: -290px; */
+    /* width: 0; */
+    height: 157px;
+    transition: height 0.2s ease-out 0s;
 }
 
 
