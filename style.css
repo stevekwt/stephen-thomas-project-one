@@ -99,25 +99,30 @@ p {
     font-size: 5rem;
     padding: 0 12px;
     color: white;
-}
-#menu {
-    /* position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 80px; */
-    /* display: none; */
+    float: right;
 }
 
 .mobile-menu-content {
     color: black;
-    max-height: 0;
-    overflow: hidden;
+    /* max-height: 0;
+    overflow: hidden; */
 }
 .mobile-menu-content a {
     display:block;
     padding: 12px;
     background-color: #f2a01cc6;
     /* border: 2px solid blue; */
+}
+
+.mobile-menu-content ul {
+    display: none;
+}
+.mobile-menu-content input {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
 }
 
 /* hides all mobile menu except hamburger  */
@@ -127,8 +132,8 @@ p {
     /* .mobile-menu-content li:last-child {
         display: initial;
     } */
-.checker input:checked ~ .mobile-menu-content {
-    max-height: 100%;
+input[type="checkbox"]:checked + ul {
+    display: initial;
 }
 
 
@@ -460,6 +465,9 @@ footer span {
     /* HEADER SECTION  */
     .top-nav {
         visibility: hidden;
+    }
+    .mobile-menu {
+        display: initial;
     }
 
     /* INFO SECTION  */
