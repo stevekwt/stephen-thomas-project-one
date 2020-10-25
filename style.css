@@ -79,37 +79,36 @@ p {
     position: absolute;
     right: 0;
     top: 0;
-    /* border: 2px solid pink; */
 }
 .mobile-menu {
     position: absolute;
     right: 0;
     top: 5px;
-    width: 88%;
     display: none;
 }
 .mobile-menu-content {
     color: black;
 }
-
-.mobile-menu-content li {
-    float: left;
-    /* width: auto; */
+.mobile-menu-content label {
+    float: right;
 }
 .mobile-menu-content ul {
-    /* display: none; */
-    /* position: absolute; */
-    /* right: -290px;  */
-    /* width: 0; */
+    float: right;
     height: 0;
     overflow: hidden;
-    z-index: 1;
+}
+.mobile-menu-content li {
+    float: left;
 }
 .mobile-menu-content a {
     display:block;
     padding: 12px;
     background-color: #f2a01cc6;
-    border: 2px solid blue;
+}
+.mobile-menu-content a:hover,
+.mobile-menu-content a:active {
+    background-color: #ffffffc6;
+    transition: all 0.2s ease-out 0s;
 }
 .mobile-menu-content input {
     display: none;
@@ -122,17 +121,13 @@ p {
 }
 
 input[type="checkbox"]:checked + ul {
-    /* display: initial; */
-    /* right: 66px; */
-    /* width: 291px; */
+    height: 157px;
     transition: height 0.3s ease-out 0s;
 }
 
 input[type="checkbox"]:not(:checked) + ul {
-    /* right: -290px; */
-    /* width: 0; */
-    height: 157px;
-    transition: height 0.2s ease-out 0s;
+    height: 0px;
+    transition: height 0.3s ease-out 0s;
 }
 
 
@@ -148,16 +143,27 @@ header {
     color: white;
 }
 
-.top-nav ul {
+.top-nav ul,
+aside nav {
     text-align: center;
 }
-.top-nav li {
+.top-nav li,
+aside nav li {
     display: inline-block;
     text-transform: uppercase;
 }
-.top-nav li a {
+.top-nav li a,
+aside nav li a {
     padding: 20px;
     font-size: 1.6rem;
+}
+.top-nav li a:hover,
+aside nav li a:hover,
+.top-nav li a:active,
+aside nav li a:hover {
+    background-color: #ffffffc6;
+    color: black;
+    transition: all 0.1s ease-out 0s;
 }
 
 h1 {
@@ -179,6 +185,10 @@ h1 {
 }
 .socials li {
     padding: 5px;
+}
+.socials li:hover,
+.socials li:active {
+    color: white;
 }
 .fab {
     font-size: 2.5rem;
@@ -245,6 +255,12 @@ article {
     font-weight: bold;
     text-transform: uppercase;
 }
+.button:hover,
+.button:active {
+    background-color: #393838;
+    color: white;
+    transition: all 0.05s ease-out 0s;
+}
 
 
 /* PROFILE SECTION  */
@@ -278,16 +294,25 @@ article {
     display: inline-block;
     padding: 38px;
 }
+.main-links a {
+    color: #f2a11c;
+}
+.main-links a:hover,
+.main-links a:active {
+    color: white;
+    transition: all 0.05s ease-out 0s;
+}
 .fas {
     font-size: 5rem;
     padding: 10px;
+    color: white;
 }
 .fa-phone {
     font-size: 4rem;
     padding: 13px;
 }
 h3 {
-    color: #f2a11c;
+    color: inherit;
     text-align: center;
     font-size: 2.2rem;
     padding: 20px;
@@ -358,7 +383,7 @@ form {
 #email {
     width: 75%;
     border: none;
-    height: 42px;
+    height: 43px;
     padding-left: 30px;
     margin: 0;
     display: inline-block;
@@ -367,6 +392,7 @@ form {
 
 button {
     width: 25%;
+    /* min-width: 100px; */
     background: #f2a11c;
     text-transform: uppercase;
     font-size: 1.7rem;
@@ -375,6 +401,10 @@ button {
     margin: 0;
     display: inline-block;
     float: right;
+}
+button:hover,
+button:active {
+    color: white;
 }
 
 /* FOOTER SECTION  */
@@ -391,6 +421,24 @@ footer span {
     font-size: 1.6rem;
 }
 
+
+@media (max-width: 1110px) {
+    #email {
+        width: 70%;
+    }
+    button {
+        width: 30%;
+    }
+}
+@media (max-width: 850px) {
+    #email {
+        width: 65%;
+    }
+    button {
+        width: 35%;
+    }
+}
+  
 @media (max-width: 768px) {
     /* HEADER SECTION  */
     header {
@@ -500,10 +548,10 @@ footer span {
         margin-bottom: 25px;
     }
     /* ASIDE SECTION  */
-    nav li:nth-of-type(1) a {
+    aside nav li:nth-of-type(1) a {
         padding-left: 0;
     }
-    nav li:nth-of-type(4) a {
+    aside nav li:nth-of-type(4) a {
         padding-right: 0;
     }
     #email {
